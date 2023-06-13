@@ -1,5 +1,5 @@
 # Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters
-This repository contains the code to run GRACE: General Retrieval Adapters for Continual Editing, proposed in the paper **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters**](https://arxiv.org/abs/2211.11031).
+This repository contains the code to run GRACE: General Retrieval Adapters for Continual Editing, proposed in the paper **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters](https://arxiv.org/abs/2211.11031)**.
 
 ## Installation
 1. Install the repository
