@@ -1,0 +1,4 @@
+_name: memory
+n_iter: 100
+nkeys: 100
+edit_lr: 1e-1

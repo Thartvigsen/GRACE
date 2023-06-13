@@ -1,0 +1,6 @@
+_name: ft_ewc
+edit_lr: 1e-2
+ewc_lambda: 0.1
+fisher_mem: 10 # number of most recent samples used to computer fisher matrix
+
+

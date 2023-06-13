@@ -1,0 +1,4 @@
+_name: defer
+edit_lr: 1e-1
+n_iter: 100
+threshold: 0.5

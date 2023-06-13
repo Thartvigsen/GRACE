@@ -1,0 +1,23 @@
+defaults:  
+  - _self_
+  - editor: null
+  - experiment: null
+  - model: null
+
+tags: ~
+batch_size: 1 # Batch size for computing TRR and ERR. Default is 1 but can be increased given larger GPUs
+n_iter: 100 # Number of iterations to use per model during editing
+max_n_edits: 1000 # Maximum number of edits during experiments
+reinit: True # If True, download new model from huggingface always, if False huggingface tries to use an existing checkpoint
+dropout: 0.0
+device: cuda # Device to use. If 'cuda' but no GPU is available, all experiments default to CPU
+wandb: False # Whether or not to use W&B at all
+wandb_mode: online # Whether or not to push W&B results. Options: online, offline
+wandb_project_name: my_project # W&B project name
+wandb_run_name: null # Manual name for W&B
+metric_period: 50 # How often to compute and record ERR and TRR (computing frequently is slow)
+pretrain: False # (Hallucination Only) Whether or not to pre-train GPT2-XL
+load_pretrained: True # Whether to try and load your own pre-trained GPT2-XL
+re_init_model: False # Whether or not to initialize a new GPT2-XL model from scratch
+ckpt: False # Whether or not to save your model after training
+ckpt_dir: ./ckpts/

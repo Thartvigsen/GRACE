@@ -1,0 +1,8 @@
+name: tomh/scotus-bert
+class_name: AutoModelForSequenceClassification
+tokenizer_class: AutoTokenizer
+tokenizer_name: bert-base-cased
+inner_params:
+- bert.encoder.layer[10].output.dense.weight
+
+pt: null

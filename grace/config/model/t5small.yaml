@@ -1,0 +1,8 @@
+name: google/t5-small-ssm-nq
+class_name: AutoModelForSeq2SeqLM
+tokenizer_class: AutoTokenizer
+tokenizer_name: google/t5-small-ssm-nq
+inner_params:
+- encoder.block[4].layer[1].DenseReluDense.wo.weight
+
+pt: null

@@ -1,0 +1,9 @@
+name: gpt2-xl
+class_name: GPT2LMHeadModel
+tokenizer_class: GPT2TokenizerFast
+tokenizer_name: gpt2-xl
+inner_params:
+- transformer.h[35].mlp.c_fc.weight
+
+# pt: null
+pt: /data/healthy-ml/scratch/tomh/code/GRACE/ckpts/hallucination/ # set this to 'hallucination' inside your checkpoint directory
