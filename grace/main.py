@@ -205,9 +205,6 @@ def run(config: DictConfig):
             if hasattr(editor, "log_dict"):
                 log_dict.update(editor.log_dict) # Add any logged values inside our editor to log_dict
                 
-            print(log_dict)
-            assert 2 == 3
-
             # --- if using weights and biases, upload the log ---
             if config.wandb:
                 wandb.log(log_dict, step=i)
