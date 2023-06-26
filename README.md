@@ -1,7 +1,7 @@
 # Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters
 This repository contains the code to run GRACE: General Retrieval Adapters for Continual Editing, proposed in the paper **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters](https://arxiv.org/abs/2211.11031)**.
 
-<img width="1866" alt="image" src="https://github.com/Thartvigsen/GRACE/assets/26936677/8f28ab99-2411-4fd8-949b-8373ebfff3b5">o
+<img width="1866" alt="image" src="https://github.com/Thartvigsen/GRACE/assets/26936677/8f28ab99-2411-4fd8-949b-8373ebfff3b5">
 
 Please feel free to email me at `tomh@mit.edu` or raise an issue with this repository and I'll get back to you as soon as I can.
 
