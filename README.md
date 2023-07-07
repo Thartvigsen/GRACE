@@ -27,17 +27,17 @@ Experiments are run using [main.py](./grace/main.py). Experiment settings and hy
 
 ### Editing GPT2-XL on Hallucination with GRACE
 ```
-python grace/main.py experiment=hallucination model=gpt2xl editor=grace_gpt
+python grace/main.py experiment=hallucination model=gpt2xl editor=grace
 ```
 
 ### Editing BERT on SCOTUS with GRACE
 ```
-python grace/main.py experiment=scotus model=bert editor=grace_gpt
+python grace/main.py experiment=scotus model=bert editor=grace
 ```
 
 ### Editing T5 on zsRE with GRACE
 ```
-python grace/main.py experiment=qa model=t5small editor=grace_gpt
+python grace/main.py experiment=qa model=t5small editor=grace
 ```
 
 ## Repository Roadmap
