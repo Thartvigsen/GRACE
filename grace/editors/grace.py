@@ -51,7 +51,7 @@ class GRACE(torch.nn.Module):
         edit_module = parent_module(self.model, brackets_to_periods(self.layer))
         layer_name = self.layer.rsplit(".", 1)[-1]
         original_layer = getattr(edit_module, layer_name)
-        setattr(edit_module, layer_name, GRACEAdaptor(config, original_layer, transpose=transpose).to(self.device))
+        setattr(edit_module, layer_name, GRACEAdapter(config, original_layer, transpose=transpose).to(self.device))
         
     def __call__(self, **kwargs):
         if self.config["experiment"]["task"] == "hallucination":
@@ -99,9 +99,9 @@ class GRACE(torch.nn.Module):
         self.log_dict["chosen_key"] =  chosen_key
         self.log_dict["nkeys"] = nkeys
 
-class GRACEAdaptor(torch.nn.Module):
+class GRACEAdapter(torch.nn.Module):
     def __init__(self, config, layer, transpose):
-        super(GRACEAdaptor, self).__init__()
+        super(GRACEAdapter, self).__init__()
 
         self.layer = layer
         self.init_epsilon = config["editor"]["eps"]
