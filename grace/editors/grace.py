@@ -34,6 +34,7 @@ class GRACE(torch.nn.Module):
         self.tokenizer = model.tokenizer
         layer = config["model"]["inner_params"][0]
         self.device = config["device"]
+        self.weight = self.layer.weight
 
         # --- ensure proper formatting (GRACE edits ~layers~ not weights matrices) ---        
         suffixes = [".weight", ".bias"]
