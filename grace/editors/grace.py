@@ -8,14 +8,6 @@ def euc(query, key):
         key = key.view(1, -1)
     return torch.cdist(key, query, p=2)
 
-def pairwise_dist(query, keys, dist_fn):
-    # Compute dist from query to all keys
-    dists = []
-    d_fn = euc
-    for i in range(len(keys)):
-        dists.append(d_fn(query, keys[i]).view(-1, 1))
-    return torch.stack(dists).view(-1, len(query))
-
 def perturb_values(chosen_value, num_pert, device):
     # Create a bunch of noised versions of the value, then create batch, then train value
     chosen_value = chosen_value
@@ -34,7 +26,6 @@ class GRACE(torch.nn.Module):
         self.tokenizer = model.tokenizer
         layer = config["model"]["inner_params"][0]
         self.device = config["device"]
-        self.weight = self.layer.weight
 
         # --- ensure proper formatting (GRACE edits ~layers~ not weights matrices) ---        
         suffixes = [".weight", ".bias"]
@@ -105,6 +96,7 @@ class GRACEAdapter(torch.nn.Module):
         super(GRACEAdapter, self).__init__()
 
         self.layer = layer
+        self.weight = self.layer.weight
         self.init_epsilon = config["editor"]["eps"]
         self.dist_fn = config["editor"]["dist_fn"]
         self.replacement = config["editor"]["replacement"]
@@ -169,8 +161,7 @@ class GRACEAdapter(torch.nn.Module):
                 # Keys exist, so we have decide whether or not to update them (the fact that we've made it to this point means there was an error!)
 
                 # --- search through keys for a match for query ---
-                dists = pairwise_dist(self.keys, query, dist_fn=self.dist_fn).view(len(self.keys))
-
+                dists = torch.cdist(self.keys, query, p=2).view(-1, len(query))
                 smallest_distance, nearest_key = dists.min(0)
 
                 if smallest_distance > (self.init_epsilon + self.epsilons[nearest_key]):
@@ -196,7 +187,7 @@ class GRACEAdapter(torch.nn.Module):
                 pass
 
         # compute distance from query to all keys and find the closest keys
-        dists = pairwise_dist(self.keys, query, dist_fn=self.dist_fn).view(len(self.keys), -1)
+        dists = torch.cdist(self.keys, query, p=2).view(-1, len(query))
         smallest_dist, self.chosen_key = dists.min(0)
         smallest_dist = smallest_dist.view(-1, 1)
         chosen_value = self.values[self.chosen_key]
