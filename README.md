@@ -1,3 +1,16 @@
+<div align="center">
+  
+  <div>
+  <h1>Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters</h1>
+  </div>
+
+  <div>
+      Thomas Hartvigsen&emsp; Swami Sankaranarayanan&emsp; Hamid Palangi&emsp; Yoon Kim&emsp; Marzyeh Ghassemi
+  </div>
+  <br/>
+
+</div>
+
 # Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters
 Official implementation of **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters](https://arxiv.org/abs/2211.11031)** (NeurIPS 2023).
 
