@@ -11,7 +11,7 @@
 
 </div>
 
-Official implementation of **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters](https://arxiv.org/abs/2211.11031)** (NeurIPS 2023).
+Official implementation of **[Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adaptors](https://arxiv.org/abs/2211.11031)** (NeurIPS 2023).
 
 <img width="1866" alt="image" src="https://github.com/Thartvigsen/GRACE/assets/26936677/8f28ab99-2411-4fd8-949b-8373ebfff3b5">
 
