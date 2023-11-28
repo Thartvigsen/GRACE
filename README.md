@@ -1,7 +1,7 @@
 <div align="center">
   
   <div>
-  <h1>Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters</h1>
+  <h1>Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adaptors</h1>
   </div>
 
   <div>
@@ -68,10 +68,10 @@ python grace/main.py experiment=qa model=t5small editor=grace
 ## Citation
 Please use the following to cite this work:
 ```
-@article{hartvigsen2023aging,
-  title={Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adapters},
+@inproceedings{hartvigsen2023aging,
+  title={Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adaptors},
   author={Hartvigsen, Thomas and Sankaranarayanan, Swami and Palangi, Hamid and Kim, Yoon and Ghassemi, Marzyeh},
-  journal={arXiv preprint arXiv:2211.11031},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2023}
 }
 ```
