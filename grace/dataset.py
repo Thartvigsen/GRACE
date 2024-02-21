@@ -48,7 +48,7 @@ class NQ(Dataset):
         return self.data[idx]
 
 class zsRE(Dataset):
-    def __init__(self, path="./grace/data/zsre_dev.jsonl", split="edit"):
+    def __init__(self, path="./grace/data/structured_zeroshot-dev-new_annotated_final.jsonl", split="edit"):
         questions, answers = self.load_zsre(path)
 
         edits = []
