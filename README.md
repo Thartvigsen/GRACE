@@ -32,7 +32,7 @@ Please feel free to email [Tom](https://www.tomhartvigsen.com) or raise an issue
     ```
 
 ## Data
-The QA experiments use data linked by the [MEND](https://github.com/eric-mitchell/mend) repository. Per their instructions, you can download the data for NQ and zsRE from [their Google Drive link](https://drive.google.com/drive/folders/1jAqBE45jEKR-5pMkwxlVQ0V8eKxqWbxA) and unzip each sub-directory into `grace/data`. SCOTUS and Hallucination data are handled through huggingface.
+The QA experiments use data linked by the [MEND](https://github.com/eric-mitchell/mend) repository. Per their instructions, you can download the data for NQ and zsRE from [their Google Drive link](https://drive.google.com/drive/folders/1jAqBE45jEKR-5pMkwxlVQ0V8eKxqWbxA) and unzip each sub-directory into `grace/data`. SCOTUS and Hallucination data are handled through huggingface. zip files can be unzipped using ```tar -xf [filename].zip```.
 
 ## Running experiments
 Experiments are run using [main.py](./grace/main.py). Experiment settings and hyperparameters are chosen using [hydra](https://github.com/facebookresearch/hydra). While more examples are available in [./scripts/main.sh](./scripts/main.sh), three representative experiments can be run as follows:
